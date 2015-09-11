@@ -1,0 +1,70 @@
+ <html> 
+ <head> 
+ 	<title></title> 
+ 	<link rel="stylesheet" href="style.css" type="text/css" media="all" /> 
+   </head> 
+     <body> 
+     	<!-- <h1>Welcome to <%= title %>!</h1> --> 
+     	 
+         <div id='container'> 
+         	<div id='temperature'> 
+         		<h1> Live temperature </h1> 
+         	</div> 
+ 
+ 
+        	<div id='display'> 
+         		<div id='right'> <b>?</b> </div> 
+         		<p>The live temperature in my room according to my Arduino: <span id='display_temperature'></span></p> 
+         	</div> 
+ 
+ 
+         	<div id='info'> 
+         		<div id='info_head'><h2>Lol why?<h2></div> 
+         	 
+         	<div id='so'> 
+         		<p> 
+         			So, I made this project because I was bored during the weekend. I had just received my Arduino and I figured out that I needed a -sort of- thermostat so i decide to build one! 
+         		</p> 
+ 
+ 
+         		<div id='info_head'><h2>How does it work<h2></div> 
+         		<p> 
+         			So, what it basically does is very simple the Arduino measures the temperature in my room and sends the measured temperature through the Node SerialPort library to a socket. Done. 
+         		</p> 
+ 
+ 
+         		 
+         			<div id='info_head'><h2>What did I use<h2></div> 
+         			<p> 
+         				<!-- GOTTA LOVE BR --> 
+         				- Arduino Uno <br /> 
+         				- Breadboard <br /> 
+         				- Node.JS <br /> 
+         				- Socket.IO <br /> 
+         				- Node serialport 
+         			</p> 
+ 
+ 
+         			<div id='info_head'><h2>Github<h2></div> 
+         			<p> 
+         				<a href="https://github.com/Nathansakoetoe/Arduino-Temperature"> Yo </a> 
+         			</p> 
+ 
+ 
+         	</div> 
+         </div> 
+        <div>  
+ 
+ 
+ 
+ 
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+ 	<script src="/socket.io/socket.io.js"></script> 
+ 	<script src="/inner.js"></script> 
+ 	<script> 
+ 		$('#right').on('click',function(){ 
+    			$('#info').toggle().fadeIn; 
+ 		}); 
+ 	</script> 
+     </body> 
+ </html> 
